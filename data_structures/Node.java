@@ -1,4 +1,6 @@
 package csc130.maloneye.Classwork;
+// Emmett Maloney
+// Spring 2017
 
 public class Node<T> {
 	T data;
