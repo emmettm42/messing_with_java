@@ -1,56 +1,40 @@
-package csc130.maloneye.Classwork;
+package data_structures;
+// Emmett Maloney
+// Spring 2017
 
-/***************************************************************************
- * A Linked List class with a private static inner Node class.
- *
- *****************************************************************************/
+// A Linked List class with a private static inner Node class.
+
 
 import java.util.*;
 
 public class LinkedList<T> implements Iterable<T> {
    private Node<T> head;
 
- /**
-   *  Constructs an empty list
-   */
+ // Constructs an empty list
    public LinkedList(){
       head = null;
    }
- /**
-   *  Returns true if the list is empty
-   *
-   */
+ // Returns true if the list is empty
    public boolean isEmpty(){
       return head == null;
    }
- /**
-   *  Inserts a new node at the beginning of this list.
-   *
-   */
+	
+ // Inserts a new node at the beginning of this list.
    public void addFirst(T item){
       head = new Node<T>(item, head);
    }
- /**
-   *  Returns the first element in the list.
-   *
-   */
+ // Returns the first element in the list.
    public T getFirst(){
       if(head == null) throw new NoSuchElementException();
       return head.data;
    }
- /**
-   *  Removes the first element in the list.
-   *
-   */
+ // Removes the first element in the list.
    public T removeFirst(){
       T tmp = getFirst();
       head = head.next;
       return tmp;
    }
- /**
-   *  Inserts a new node to the end of this list.
-   *
-   */
+ // Inserts a new node to the end of this list.
    public void addLast(T item){
       if( head == null)
          addFirst(item);
@@ -62,10 +46,7 @@ public class LinkedList<T> implements Iterable<T> {
          tmp.next = new Node<T>(item, null);
       }
    }
- /**
-   *  Returns the last element in the list.
-   *
-   */
+ // Returns the last element in the list.
    public T getLast()
    {
       if(head == null) throw new NoSuchElementException();
@@ -75,18 +56,12 @@ public class LinkedList<T> implements Iterable<T> {
 
       return tmp.data;
    }
- /**
-   *  Removes all nodes from the list.
-   *
-   */
+ // Removes all nodes from the list.
    public void clear()
    {
       head = null;
    }
- /**
-   *  Returns true if this list contains the specified element.
-   *
-   */
+ // Returns true if this list contains the specified element.
    public boolean contains(T x)
    {
       for(T tmp : this)
@@ -94,10 +69,7 @@ public class LinkedList<T> implements Iterable<T> {
 
       return false;
    }
- /**
-   *  Returns the data at the specified position in the list.
-   *
-   */
+ // Returns the data at the specified position in the list.
    public T get(int pos)
    {
       if (head == null) throw new IndexOutOfBoundsException();
@@ -109,10 +81,7 @@ public class LinkedList<T> implements Iterable<T> {
 
       return tmp.data;
    }
- /**
-   *  Returns a string representation
-   *
-   */
+ // Returns a string representation
    public String toString(){
       StringBuffer result = new StringBuffer();
       for(Object x : this)
@@ -132,10 +101,7 @@ public class LinkedList<T> implements Iterable<T> {
       if(tmp != null)
          tmp.next = new Node<T>(toInsert, tmp.next);
    }
- /**
-   *  Inserts a new node before a node containing the key.
-   *
-   */
+ // Inserts a new node before a node containing the key.
    public void insertBefore(T key, T toInsert)
    {
       if(head == null) return;
@@ -158,10 +124,7 @@ public class LinkedList<T> implements Iterable<T> {
       if(cur != null)
          prev.next = new Node<T>(toInsert, cur);
    }
- /**
-   *  Removes the first occurrence of the specified element in this list.
-   *
-   */
+ // Removes the first occurrence of the specified element in this list.
    public void remove(T key){
       if(head == null)
          throw new RuntimeException("cannot delete");
@@ -183,10 +146,10 @@ public class LinkedList<T> implements Iterable<T> {
       //delete cur node
       prev.next = cur.next;
    }
- /**
-   *  Returns a deep copy of the list
-   *  Complexity: O(n^2)
-   */
+ /*
+  *  Returns a deep copy of the list
+  *  Complexity: O(n^2)  
+  */
    public  LinkedList<T> copy1(){
       LinkedList<T> twin = new LinkedList<T>();
       Node<T> tmp = head;
@@ -215,7 +178,7 @@ public class LinkedList<T> implements Iterable<T> {
    }
  /**
    *  Reverses the list
-   *  Complewxity: O(n)
+   *  Complexity: O(n)
    */
    public LinkedList<T> reverse(){
       LinkedList<T> list = new LinkedList<T>();
@@ -248,11 +211,11 @@ public class LinkedList<T> implements Iterable<T> {
       return twin;
    }
 
- /*******************************************************
- *
- *  The Node class
- *
- ********************************************************/
+ /*
+  *
+  *  The Node class
+  *
+  */
    private static class Node<T>
    {
       private T data;
@@ -265,11 +228,11 @@ public class LinkedList<T> implements Iterable<T> {
       }
    }
 
- /*******************************************************
- *
- *  The Iterator class
- *
- ********************************************************/
+ /*
+  *
+  *  The Iterator class
+  *
+  */
 
    public Iterator<T> iterator() {
       return new LinkedListIterator();
@@ -298,7 +261,7 @@ public class LinkedList<T> implements Iterable<T> {
 
 
 
-/*****   Include the main() for testing and debugging  *****/
+//   Include the main() for testing and debugging 
 
 
    public static void main(String[] args)
