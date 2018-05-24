@@ -1,22 +1,8 @@
 package csc130.maloneye.Lab5a;
 
-/**
- * <p>
+/*
  * Title: Queue
- * </p>
- *
- * <p>
  * Description: Implements QueueADT with use of an Array
- * </p>
- *
- * <p>
- * Copyright: Copyright (c) 2017
- * </p>
- *
- * <p>
- * Company:
- * </p>
- *
  * @author E Maloney
  * @version 1.0
  */
