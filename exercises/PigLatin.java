@@ -1,4 +1,7 @@
 package exercises;
+// Emmett Maloney
+// CS 120
+// NCC, Fall 2016
 
 public class PigLatin {
 	public static void main(String[] args){
