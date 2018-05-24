@@ -1,4 +1,6 @@
-package csc130.maloneye.Classwork;
+package data_structures;
+// Emmett Maloney
+// Spring 2017
 
 public interface ArrayStackADT<T> {
 	void push(T d) throws RuntimeException;
