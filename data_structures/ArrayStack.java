@@ -1,4 +1,7 @@
-package csc130.maloneye.Classwork;
+package data_structures;
+// Emmett Maloney
+// CS 130
+// NCC, Spring 2017
 
 public class ArrayStack<T> implements ArrayStackADT<T> {
 	private T[] data;
