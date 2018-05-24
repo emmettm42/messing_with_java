@@ -1,4 +1,6 @@
-package csc130.maloneye.Classwork;
+package data_structures;
+// Emmett Maloney
+// Spring 2017
 
 public class CircularLinkedQueue<T> implements CircularQueueADT<T> {
 	private class Node<E> {
