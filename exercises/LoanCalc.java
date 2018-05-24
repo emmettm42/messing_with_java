@@ -1,5 +1,7 @@
-// File: LoanCalc.java
-// Name: Emmett Maloney
+// Emmett Maloney
+// CS 120
+// NCC, Fall 2016
+
 // Purpose: Allows the user to calculate their monthly payment based on a loan amount, an
 // annual interest rate, and the term (number of years) of the loan.
 import java.util.*;
